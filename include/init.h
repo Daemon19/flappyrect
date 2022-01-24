@@ -13,10 +13,5 @@ namespace candy
         ~Init();
     };
 
-    enum InitFlag
-    {
-        kInitVideo = SDL_INIT_VIDEO
-    };
-
-    bool InitSdl(InitFlag flags);
+    bool InitSdl(Uint32 flags);
 }

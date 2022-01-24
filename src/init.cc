@@ -1,6 +1,8 @@
 #include <SDL2/SDL.h>
 #include <iostream>
 
+#include <SDL2/SDL.h>
+
 #include "init.h"
 
 namespace candy
@@ -12,7 +14,7 @@ namespace candy
         SDL_Quit();
     }
 
-    bool InitSdl(InitFlag flags)
+    bool InitSdl(Uint32 flags)
     {
         if (SDL_Init(flags) < 0)
         {
