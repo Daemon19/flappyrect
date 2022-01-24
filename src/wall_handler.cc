@@ -42,3 +42,13 @@ void WallHandler::Draw(SDL_Renderer *renderer)
     for (auto &&w : walls_)
         w.Draw(renderer);
 }
+
+bool WallHandler::CollideRect(const SDL_Rect &rect)
+{
+    for (auto &&w : walls_)
+    {
+        if (w.CollideRect(rect))
+            return true;
+    }
+    return false;
+}

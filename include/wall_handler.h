@@ -24,6 +24,8 @@ private:
 public:
     WallHandler(const WallHandler &) = delete;
     WallHandler(int window_w, int window_h, Uint32 create_delay);
+
     void Update();
     void Draw(SDL_Renderer *renderer);
+    bool CollideRect(const SDL_Rect &rect);
 };

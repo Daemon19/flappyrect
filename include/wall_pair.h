@@ -13,8 +13,10 @@ private:
 
 public:
     WallPair(const Wall &top, const Wall &bottom);
+
     void Update();
     void Draw(SDL_Renderer *renderer);
+    bool CollideRect(const SDL_Rect &rect);
 
     bool out_of_frame() const { return out_of_frame_; }
 };

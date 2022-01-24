@@ -22,3 +22,14 @@ void WallPair::Draw(SDL_Renderer *renderer)
     top_.Draw(renderer);
     bottom_.Draw(renderer);
 }
+
+bool WallPair::CollideRect(const SDL_Rect &rect)
+{
+    auto CollideRect = [&](const SDL_Rect &other)
+    {
+        return (rect.x <= other.x + other.w && rect.x + rect.w >= other.x &&
+                rect.y <= other.y + other.h && rect.y + rect.h >= other.y);
+    };
+
+    return CollideRect(top_.rect()) || CollideRect(bottom_.rect());
+}
