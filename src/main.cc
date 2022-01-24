@@ -39,11 +39,11 @@ int main(int argc, char *argv[])
         SDL_SetRenderDrawColor(window, 10, 10, 25, 255);
         SDL_RenderClear(window);
 
-        SDL_SetRenderDrawColor(window, 255, 255, 255, 255);
-        player.Draw(window);
-
         SDL_SetRenderDrawColor(window, 255, 50, 50, 255);
         wall_handler.Draw(window);
+
+        SDL_SetRenderDrawColor(window, 255, 255, 255, 255);
+        player.Draw(window);
 
         SDL_RenderPresent(window);
     }
