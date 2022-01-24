@@ -15,4 +15,6 @@ public:
     virtual ~Entity() {}
     virtual void Update() = 0;
     virtual void Draw(SDL_Renderer *renderer) const;
+
+    SDL_Rect rect() const { return rect_; }
 };

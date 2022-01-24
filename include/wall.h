@@ -12,7 +12,4 @@ public:
 
     Wall(int x, int y);
     void Update();
-
-    SDL_Rect rect() const { return rect_; }
-    void set_pos(int x, int y);
 };

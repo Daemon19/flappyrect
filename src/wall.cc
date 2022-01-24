@@ -15,9 +15,3 @@ void Wall::Update()
 {
     rect_.x += kXVel;
 }
-
-void Wall::set_pos(int x, int y)
-{
-    rect_.x = x;
-    rect_.y = y;
-}
