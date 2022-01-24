@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     Window window;
     window.Init("Flappy Bird", 525, 700);
 
-    Player player({100, (window.h() - 60) / 2, 60, 60}, -16);
+    Player player(100, (window.h() - Player::kSize) / 2);
 
     WallHandler wall_handler(window.w(), window.h(), 1000);
 
@@ -35,6 +35,12 @@ int main(int argc, char *argv[])
 
         player.Update();
         wall_handler.Update();
+
+        if (wall_handler.CollideRect(player.rect()))
+        {
+            player.Reset();
+            wall_handler.Reset();
+        }
 
         SDL_SetRenderDrawColor(window, 10, 10, 25, 255);
         SDL_RenderClear(window);

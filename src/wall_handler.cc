@@ -12,7 +12,7 @@ WallHandler::WallHandler(int window_w, int window_h, Uint32 create_delay)
     : window_w_(window_w),
       window_h_(window_h),
       create_delay_(create_delay),
-      last_create_(0)
+      last_create_(SDL_GetTicks())
 {
 }
 
@@ -51,4 +51,10 @@ bool WallHandler::CollideRect(const SDL_Rect &rect)
             return true;
     }
     return false;
+}
+
+void WallHandler::Reset()
+{
+    walls_.clear();
+    last_create_ = SDL_GetTicks();
 }

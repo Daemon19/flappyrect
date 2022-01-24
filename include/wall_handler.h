@@ -28,4 +28,5 @@ public:
     void Update();
     void Draw(SDL_Renderer *renderer);
     bool CollideRect(const SDL_Rect &rect);
+    void Reset();
 };
