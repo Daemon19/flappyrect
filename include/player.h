@@ -14,7 +14,7 @@ private:
     float yvel_;
 
 public:
-    Player(const SDL_Rect &rect);
+    Player(const SDL_Rect &rect, const float yvel);
     void Jump();
     void Update();
 };

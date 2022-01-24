@@ -14,5 +14,5 @@ public:
     Entity(const SDL_Rect &rect);
     virtual ~Entity() {}
     virtual void Update() = 0;
-    virtual void Draw(SDL_Renderer *renderer);
+    virtual void Draw(SDL_Renderer *renderer) const;
 };

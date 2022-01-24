@@ -9,7 +9,7 @@ Entity::Entity(const SDL_Rect &rect)
 {
 }
 
-void Entity::Draw(SDL_Renderer *renderer)
+void Entity::Draw(SDL_Renderer *renderer) const
 {
     SDL_RenderFillRect(renderer, &rect_);
 }

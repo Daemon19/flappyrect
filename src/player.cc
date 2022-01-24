@@ -5,8 +5,8 @@
 const float Player::kGravity = 0.8;
 const float Player::kJumpVel = -16;
 
-Player::Player(const SDL_Rect &rect)
-    : Entity(rect), yvel_(0)
+Player::Player(const SDL_Rect &rect, const float yvel)
+    : Entity(rect), yvel_(yvel)
 {
 }
 
