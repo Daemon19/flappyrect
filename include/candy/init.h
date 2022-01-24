@@ -14,4 +14,5 @@ namespace candy
     };
 
     bool InitSdl(Uint32 flags);
+    bool InitTtf();
 }

@@ -1,4 +1,5 @@
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
 #include <vector>
 
 #include "candy/candy.h"
@@ -10,6 +11,10 @@ int main(int argc, char *argv[])
     using namespace candy;
 
     InitSdl(SDL_INIT_VIDEO);
+    InitTtf();
+
+    TTF_Font *score_font = TTF_OpenFont("res/score_font.ttf", 15);
+    TTF_CloseFont(score_font);
 
     Window window;
     window.Init("Flappy Bird", 525, 700);

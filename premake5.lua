@@ -8,7 +8,7 @@ project "flappybird"
     targetdir "build/bin/%{cfg.buildcfg}"
 
     includedirs {"include", "include/candy"}
-    links {"SDL2main", "SDL2"}
+    links {"SDL2main", "SDL2", "SDL2_ttf"}
     files {"**.h", "**.cc"}
 
     filter "configurations:Debug"
