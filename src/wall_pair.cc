@@ -4,7 +4,7 @@
 #include "wall_pair.h"
 
 WallPair::WallPair(const Wall &top, const Wall &bottom)
-    : top_(top), bottom_(bottom), out_of_frame_(false)
+    : top_(top), bottom_(bottom), out_of_frame_(false), passed_by_player_(false)
 {
 }
 
@@ -32,4 +32,14 @@ bool WallPair::CollideRect(const SDL_Rect &rect)
     };
 
     return CollideRect(top_.rect()) || CollideRect(bottom_.rect());
+}
+
+bool WallPair::CheckPassed(const SDL_Rect &player_rect)
+{
+    if (!passed_by_player_ && player_rect.x > top_.rect().x + top_.rect().w)
+    {
+        passed_by_player_ = true;
+        return true;
+    }
+    return false;
 }

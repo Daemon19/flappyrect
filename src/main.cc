@@ -43,6 +43,11 @@ int main(int argc, char *argv[])
             wall_handler.Reset();
         }
 
+        if (wall_handler.CheckPassed(player.rect()))
+            player.add_score();
+
+        SDL_Log("score: %i\n", player.score());
+
         SDL_SetRenderDrawColor(window, 10, 10, 25, 255);
         SDL_RenderClear(window);
 

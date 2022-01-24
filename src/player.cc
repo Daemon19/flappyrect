@@ -7,7 +7,11 @@ const float Player::kJumpVel = -14;
 const int Player::kSize = 60;
 
 Player::Player(int x, int y)
-    : Entity({x, y, kSize, kSize}), start_x_(x), start_y_(y), yvel_(0)
+    : Entity({x, y, kSize, kSize}),
+      start_x_(x),
+      start_y_(y),
+      yvel_(0),
+      score_(0)
 {
 }
 
@@ -26,5 +30,6 @@ void Player::Reset()
 {
     rect_.x = start_x_;
     rect_.y = start_y_;
+    score_ = 0;
     Jump();
 }

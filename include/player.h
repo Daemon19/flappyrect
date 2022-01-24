@@ -15,10 +15,15 @@ private:
     const int start_x_;
     const int start_y_;
     float yvel_;
+    int score_;
 
 public:
     Player(int x, int y);
+
     void Jump();
     void Update();
     void Reset();
+
+    int score() const { return score_; }
+    void add_score() { score_++; }
 };

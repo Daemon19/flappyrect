@@ -53,6 +53,16 @@ bool WallHandler::CollideRect(const SDL_Rect &rect)
     return false;
 }
 
+bool WallHandler::CheckPassed(const SDL_Rect &player_rect)
+{
+    for (auto &&w : walls_)
+    {
+        if (w.CheckPassed(player_rect))
+            return true;
+    }
+    return false;
+}
+
 void WallHandler::Reset()
 {
     walls_.clear();
