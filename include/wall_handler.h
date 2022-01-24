@@ -4,23 +4,7 @@
 #include <vector>
 
 #include "wall.h"
-
-class WallPair
-{
-private:
-    Wall top_;
-    Wall bottom_;
-    bool out_of_frame_;
-
-public:
-    // \param x left side of wall pair
-    // \param y bottom left of top wall
-    WallPair(const Wall &top, const Wall &bottom);
-    void Update();
-    void Draw(SDL_Renderer *renderer);
-
-    bool out_of_frame() const { return out_of_frame_; }
-};
+#include "wall_pair.h"
 
 class WallHandler
 {
