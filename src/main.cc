@@ -36,7 +36,8 @@ int main(int argc, char *argv[])
         player.Update();
         wall_handler.Update();
 
-        if (wall_handler.CollideRect(player.rect()))
+        if (wall_handler.CollideRect(player.rect()) ||
+            player.rect().y > window.h())
         {
             player.Reset();
             wall_handler.Reset();
