@@ -23,8 +23,8 @@ namespace candy
         operator SDL_Window *() { return window_; }
         operator SDL_Renderer *() { return renderer_; }
 
-        int w() { return w_; }
-        int h() { return h_; }
+        int w() const { return w_; }
+        int h() const { return h_; }
 
     private:
         void Free();
