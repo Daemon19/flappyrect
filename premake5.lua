@@ -7,7 +7,7 @@ project "flappybird"
     location "build"
     targetdir "build/bin/%{cfg.buildcfg}"
 
-    includedirs {"include"}
+    includedirs {"include", "include/candy"}
     links {"SDL2main", "SDL2"}
     files {"**.h", "**.cc"}
 
