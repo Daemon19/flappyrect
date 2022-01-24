@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     InitSdl(SDL_INIT_VIDEO);
 
     Window window;
-    window.Init("Flappy Bird", 600, 800);
+    window.Init("Flappy Bird", 525, 700);
 
     Player player({100, (window.h() - 60) / 2, 60, 60}, -16);
 

@@ -24,8 +24,8 @@ void WallPair::Draw(SDL_Renderer *renderer)
     bottom_.Draw(renderer);
 }
 
-const int WallHandler::kGapMin = 300;
-const int WallHandler::kGapMax = 350;
+const int WallHandler::kGapMin = 250;
+const int WallHandler::kGapMax = kGapMin + 50;
 const int WallHandler::kMinYOff = 100;
 
 WallHandler::WallHandler(int window_w, int window_h, Uint32 create_delay)
