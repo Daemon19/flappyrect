@@ -4,7 +4,7 @@
 #include "wall.h"
 #include "wall_handler.h"
 
-const int WallHandler::kGapMin = 250;
+const int WallHandler::kGapMin = 210;
 const int WallHandler::kGapMax = kGapMin + 50;
 const int WallHandler::kMinYOff = 100;
 
