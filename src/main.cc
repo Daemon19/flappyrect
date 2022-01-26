@@ -14,8 +14,7 @@ int main(int argc, char *argv[])
     InitTtf();
 
     Window window;
-    // window.Init("Flappy Bird", 525, 700);
-    window.Init("Flappy Bird", 480, 640);
+    window.Init("Flappy Rect", 480, 640);
 
     Player player(100, (window.h() - Player::kSize) / 2);
 

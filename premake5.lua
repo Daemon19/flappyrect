@@ -1,7 +1,7 @@
-workspace "flappybird"
+workspace "flappyrect"
     configurations {"Debug", "Release"}
 
-project "flappybird"
+project "flappyrect"
     kind "WindowedApp"
     language "C++"
     location "build"
